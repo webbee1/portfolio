@@ -1,26 +1,28 @@
 section.works-section{
-  background-color:#fff;
-  padding:3% 0;
+  background-color:$text-color;
 }
 
-
+.works__container{
+  margin-bottom:5%;
+}
 .works__section-title{
   color:$footer-color;
   font-size:36px;
-  line-height:1.33;
   font-weight:700;
-  margin-bottom:40px;
+  padding:6% 0 3%;
 }
 
 .slider {
   display: flex;
+  overflow:hidden;
+  min-height:350px;
 }
 .slider__list {
   display: flex;
   position: absolute;
   left: 20.5%;
   top: 70%;
-flex-direction:row;
+  flex-direction:row;
 
 }
 .slider__col {
@@ -30,12 +32,12 @@ flex-direction:row;
 }
 .slider__col_left {
   position: relative;
-  z-index:30;
+  z-index:3;
   width: 65%;
   margin-left: 0;
 }
 .slider__pic_big {
-  display: inline-flex;
+  display: flex;
 }
 
 .slider__pic_prew {

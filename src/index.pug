@@ -67,25 +67,64 @@ html(lang="en")
             .skills__box
               .skills__title Чем я могу быть полезен вам
               p.skills__info Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
-            .skills__right
+              .skills__right
                 .skills__right-desc
-                  .skills__title Front-end
-                    .skills__row
-                      .skills__item
+                  ul.skills__list 
+                    li.skills-group__item
+                      .skills-group__title Front-end
+                    ul.skills__list
+                      li.skills__item
+                        .skill__title HTML5
                       svg.percentage(viewBox="0 0 100 100", preserveAspectRatio="none")
                         circle(cx="50", cy="50", r="40").circle.circle__under
                         circle(cx="50", cy="50", r="40", style="animation-delay:-5s").circle.circle__above
 
-                    .skills__row
-                      .skills__item
+                      li.skills__item
+                        .skill__title CSS3
+                      svg.percentage(viewBox="0 0 100 100", preserveAspectRatio="none")
+                        circle(cx="50", cy="50", r="40").circle.circle__under
+                        circle(cx="50", cy="50", r="40", style="animation-delay:-5s").circle.circle__above
+
+                      li.skills__item
+                        .skill__title Javascript
                       svg.percentage(viewBox="0 0 100 100", preserveAspectRatio="none")
                         circle(cx="50", cy="50", r="40").circle.circle__under
                         circle(cx="50", cy="50", r="40", style="animation-delay:-80s").circle.circle__above
 
-                
-                          
+                      li.skills__item
+                        .skill__title Jquery и Vue.js
+                      svg.percentage(viewBox="0 0 100 100", preserveAspectRatio="none")
+                        circle(cx="50", cy="50", r="40").circle.circle__under
+                        circle(cx="50", cy="50", r="40", style="animation-delay:-50s").circle.circle__above      
+                    li.skills-group__item
+                      .skills-group__title Front-end
+                    ul.skills__list
+                      li.skills__item
+                        .skill__title HTML5
+                      svg.percentage(viewBox="0 0 100 100", preserveAspectRatio="none")
+                        circle(cx="50", cy="50", r="40").circle.circle__under
+                        circle(cx="50", cy="50", r="40", style="animation-delay:-5s").circle.circle__above
 
-        section.works-section
+                      li.skills__item
+                        .skill__title CSS3
+                      svg.percentage(viewBox="0 0 100 100", preserveAspectRatio="none")
+                        circle(cx="50", cy="50", r="40").circle.circle__under
+                        circle(cx="50", cy="50", r="40", style="animation-delay:-5s").circle.circle__above
+
+                      li.skills__item
+                        .skill__title Javascript
+                      svg.percentage(viewBox="0 0 100 100", preserveAspectRatio="none")
+                        circle(cx="50", cy="50", r="40").circle.circle__under
+                        circle(cx="50", cy="50", r="40", style="animation-delay:-80s").circle.circle__above
+
+                      li.skills__item
+                        .skill__title Jquery и Vue.js
+                      svg.percentage(viewBox="0 0 100 100", preserveAspectRatio="none")
+                        circle(cx="50", cy="50", r="40").circle.circle__under
+                        circle(cx="50", cy="50", r="40", style="animation-delay:-50s").circle.circle__above      
+
+
+        section.works__section
           .container.works__container
             h3.section-title.works__section-title Мои работы
             .slider
@@ -116,17 +155,16 @@ html(lang="en")
                     li.slider__text-item
                       a(href="#").slider__text-link JavaScript
                 .slider__text-title Сайт школы образование
-                .slider__text-desc Эта девушка проходила обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+                .slider__text-desc Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
                 .slider__school
                   +icon('link', 'slider__school-icon')
                   a(href="#").slider__school-link Посмотреть сайт
                 
-
         section.feedback-section
           .container.feedback-container
             .feedback__about
               .feedback__top
-                h4.feedback__info-title Что обо мне говорят
+                h4.section-title.feedback__section-title Что обо мне говорят
                 .feedback__button
                   button.button.feedback__btn.feedback__btn_prew
                     +icon('arrow-down','feedback__btn-icon')              
@@ -159,7 +197,7 @@ html(lang="en")
                           .persone__post Преподаватель  
 
             .feedback__form
-              .form__title Связаться со мной
+              .form__title.section-title Связаться со мной
               .form
                 .form__row
                   label.form-box Введите ваше имя
@@ -180,8 +218,7 @@ html(lang="en")
                         textarea.form__input.form__input--big(type="text", placeholder="Требуется ваша помощь в создании сайта. Интересуют сроки и цена вопроса")
                 .form__row
                   input.form-btn(type="submit" value="Отправить")
-
-    footer.footer
+      footer.footer
         .container.footer-container
           .footer__copy 
             .footer__copy-col
