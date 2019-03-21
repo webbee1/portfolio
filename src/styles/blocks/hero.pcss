@@ -1,41 +1,68 @@
 section.hero-section{
-  background:url('../images/content/bg/train_bridge.jpg')center 28% no-repeat;
-  min-height:100vh;
-  background-size:cover;
   color: $text-color;
+  position:relative;
 }
-/* .hero-container{
-  padding-top:60px;
-} */
-
-
 
 .hero__content{
-  display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-       align-self: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    position:absolute;
-    /* left:50%; */
-    top:25%;
-    margin-left:15%;
+  display:flex;
+  flex-direction:row;
+  width: 55%;
+  line-height:.83;
+ 
+    @include tablets{
+      text-align:center;
+      flex-direction:column;
+  }
+    @include phones{
+      width:80%;
+      text-align:center;
+      flex-direction:column;
+  }
+}
+
+.hero-container{
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  padding:3% 0 0 0;
+}
+
+.hero__desc{
+  flex:.8;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100%;
+
 }
 
 .hero__title{
   font-size:18px;
   color:$icon-color;
   text-align:right;
-  
-  margin-right:5%;
-  word-wrap: break-word; 
-  width: 230px;
-}
+  margin-right:3%;
+  line-height:20px;
+  word-wrap: break-word;
 
+    @include tablets{
+      font-size:16px;
+      line-height:1.8;
+      text-align:center;
+      width:50%;
+      margin:0 auto;
+  }
+}
 .hero__name{
   font-size:72px;
   font-weight:800;
   line-height:0.83;
+    
+  @include tablets{
+    font-size:48px;
+    margin:0 auto;
+  }
+  @include phones{
+    font-size:36px;
+    line-height:1.3;
+  }
 }

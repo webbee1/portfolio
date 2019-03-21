@@ -7,7 +7,6 @@
 .socials__icon{
   width:28px;
   height:25px;
-  margin-right:25px;
   fill:$icon-color;
 
    &:hover{
@@ -15,10 +14,16 @@
   transition: .6s;
   }
 }
-
+.socials__item{
+  margin-right:25px;
+  
+  &:last-child{
+    margin-right:0;
+  }
+}
 .footer__socials-icon{
-  width:28px;
-  height:25px;
+  width:25px;
+  height:22px;
   fill:$light-grey;
   }
   
@@ -28,6 +33,10 @@
   border:1px solid $light-grey;
   border-radius:100%;
   margin-right:25px;
+  
+  &:last-child{
+    margin-right:0;
+  }
 }
 
 .footer__socials-link{

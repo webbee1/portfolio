@@ -13,16 +13,11 @@
 .form__row{
   display:flex;
   margin-bottom:30px;
-
-  &--big{
-    margin-bottom:50px;
-  }
 }
 
 .form-box__content{
   display:flex;
   align-items:center;
-  margin-bottom:20px;
   border-bottom:1px solid $text-color;
 }
 
@@ -56,7 +51,7 @@
 }
 .form__input::-webkit-input-placeholder{
   color: $text-color;
-  font-weight:700;
+  font-weight:600;
 
 }
 
@@ -77,4 +72,7 @@
 }
 textarea {
 	resize: none;
+}
+input[placeholder] {
+  text-overflow:ellipsis;
 }

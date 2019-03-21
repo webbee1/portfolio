@@ -15,12 +15,15 @@ section.works-section{
 .slider {
   display: flex;
   overflow:hidden;
-  min-height:350px;
+
+  max-width: 100%;
+  max-height: 80%;
 }
 .slider__list {
   display: flex;
   position: absolute;
-  left: 20.5%;
+  top:70%;
+  right:0;
   top: 70%;
   flex-direction:row;
 
@@ -55,9 +58,11 @@ section.works-section{
   color: $dark-grey;
   font-weight: 600;
   font-size: 15px;
+  padding: 15px;
+    line-height: 3;
+    border-radius: 22px;
   background-color:  $light-grey;
-  border-radius: 22px;
-  padding: 5px 20px;
+ 
 }
 
 .slider__text-title {
@@ -145,4 +150,13 @@ text-decoration: none;
 
 .arrow__right {
   bottom:0px;
+}
+
+.slider__item{
+  background-size:cover;
+  position:relative;
+  border:2px solid transparent;
+  &:active{
+    border:2px solid $main-color;
+  }
 }
