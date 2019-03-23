@@ -1,0 +1,100 @@
+section.skills-section{
+  background: url('../images/content/bg/bg_3.jpg')  no-repeat;
+  background-size:cover;
+  background-position:center center;
+  position:relative;
+  display:flex;
+  flex-direction:row;
+  min-height:650px;
+}
+.skills-container{
+  position:relative;
+  padding:3% 0 0 0;
+  display:flex;
+  flex-direction:column;
+  margin-bottom:3%;
+
+  &:before{
+    content:"";
+    display:block;
+    position:absolute;
+    background: url("../images/content/hands.png") left bottom no-repeat;
+    background-size:contain;
+    height:80%;
+    width:70%;
+    left:-15%;
+    bottom:-20%;
+  }
+}
+.skills-group__item{
+  padding-bottom:60px;
+}
+.skills-group__title{
+  font-size:30px;
+  font-weight:600;
+  padding:1% 0;
+  text-align:left;
+  color:$text-color;
+}
+.skills__info{
+  margin:0 auto;
+  line-height: 1.8;
+  color:$half-white;
+}
+
+.skills__right{
+  display:flex;
+  z-index:5;
+  justify-content:flex-end;
+  padding:2% 0;
+  width:85%;
+}
+
+.percentage{
+  display:inline-block;
+  width:150px;
+  height:150px;
+  transform:rotate(-90 deg);
+}
+
+.skills__list{
+  display:flex;
+  flex-direction:row;
+  justify-content:flex-start;
+  align-items:center;
+  justify-content:space-around;
+  flex-wrap:wrap;
+}
+
+.skills__item{
+  position:relative;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  width:150px;
+  height:150px;
+}
+
+.skill-item__title{
+  position:absolute;
+  font-size:16px;
+  font-weight:700;
+  color:$half-white;
+  text-align:center;
+  padding:0 6px;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+}
+
+.skills__box{
+  width: 45%;
+  margin: 0 auto;
+  padding:6% 0 3% ;
+}
+
+ .skills__right-desc{
+  padding:0 1%;
+  width:65%;
+} 

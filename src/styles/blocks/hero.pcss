@@ -1,0 +1,70 @@
+section.hero-section{
+  color: $text-color;
+  height:100vh;
+  position:relative;
+  background-size:cover;
+}
+
+.hero__content{
+  display:flex;
+  flex-direction:row;
+
+    @include tablets{
+      text-align:center;
+      flex-direction:column;
+  }
+    @include phones{
+      width:50%;
+      text-align:center;
+      flex-direction:column;
+  }
+}
+
+.hero-container{
+  height:100%;
+  display:flex;
+  flex-direction:column;/* padding:55px 0; */
+}
+
+.hero__desc{
+  flex:.9;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100%;
+  line-height: 0.83;
+  
+    @include tablets{
+     padding:0 5%;
+  }
+}
+
+.hero__title{
+  font-size:18px;
+  color:$icon-color;
+  text-align:right;
+  margin-right:3%;
+  line-height:1.67;
+  word-wrap: break-word;
+
+    @include tablets{
+      font-size:16px;
+      line-height:1.4;
+      text-align:center;
+      white-space:nowrap;
+  }
+}
+.hero__name{
+  font-size:72px;
+  font-weight:800;
+  line-height:0.83;
+    
+  @include tablets{
+    font-size:48px;
+    margin:0 auto;
+  }
+  @include phones{
+    font-size:36px;
+    line-height:1.3;
+  }
+}

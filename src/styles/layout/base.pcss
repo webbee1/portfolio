@@ -6,9 +6,11 @@ html {
     font-size: 14px;
   }
 }
+
 body,
 html {
   height: 100%;
+  width:100%;
 }
 
 body {
@@ -20,6 +22,12 @@ body {
   color: $text-color;
 }
 
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
 .wrapper {
   overflow: hidden;
   min-height: 100%;
@@ -27,10 +35,11 @@ body {
 }
 
 .container {
-  margin: 0 auto;
+  margin: 0  auto;
   max-width: 1480px;
   width: 95%;
   // width: 1490px;
+  padding:1 2%;
 
   @include phones {
     width: 85%;
@@ -57,6 +66,10 @@ ul {
   list-style: none;
 }
 
+li{
+  list-style:none;
+}
+
 h1,
 h2,
 h3,
@@ -74,12 +87,14 @@ p {
 
 button[type="button"] {
   cursor: pointer;
+  border: none;
   background-color: transparent;
 }
 
 a {
   color: inherit;
   cursor: pointer;
+  text-decoration:none;
 }
 
 img {
@@ -87,3 +102,4 @@ img {
   max-width: 100%;
   max-height: 100%;
 }
+

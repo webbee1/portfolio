@@ -1,0 +1,48 @@
+.nav, .nav__footer{
+font-weight:400;
+justify-content:center;
+
+  @include tablets {
+    display: none;
+  }
+}
+.nav__list{
+  display:flex;
+  justify-content:center;
+}
+
+.nav__link, .nav__footer-link{
+  white-space: nowrap;
+}
+
+.nav__list .nav__item, 
+.nav__footer-list .nav__footer-item{
+  display:flex;
+  margin:0 40px;
+  align-content:center;
+  height:50px;
+  border-bottom:1px solid transparent;
+  &:hover{
+    border-bottom:2px solid $main-color;
+    transition: .6s;
+  }
+}
+
+.nav__item:last-child,
+.nav__footer-item:last-child{
+  margin-right:0;
+  }
+  
+  .nav__item:first-child,
+  .nav__footer-item:first-child{
+  margin-left:0;
+  }
+
+.nav__footer{
+  margin-bottom:50px;
+}
+
+.nav__footer-list{
+  display:flex;
+  
+}
