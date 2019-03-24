@@ -6,12 +6,26 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    script (src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js")
     title Portfolio | main page
   body
     .wrapper
       .maincontent
         .wellcome-section
-          .parallax-section
+          section.parallax                                    
+            .parallax__layer(data-speed="0.1")
+              +image("content/parallax/clouds.png", "parallax__image", alt="parallax_layer")
+            .parallax__layer(data-speed="0.3")
+              +image("content/parallax/mount.png", "parallax__image", alt="parallax_layer")
+            .parallax__layer(data-speed="0.60")
+              +image("content/parallax/train.png", "parallax__image", alt="parallax_layer")
+            .parallax__layer(data-speed="0.15")
+              +image("content/parallax/foreground_train.png", "parallax__image", alt="parallax_layer")
+            .parallax__layer(data-speed="0.3")
+              +image("content/parallax/grass.png", "parallax__image", alt="parallax_layer")            
+            .parallax__layer(data-speed="0.02")
+              //- +image("content/parallax/shadow.png", "parallax__image", alt="parallax_layer")
+            .parallax__shadow  
           section.hero-section
             .container.hero-container
               header.header

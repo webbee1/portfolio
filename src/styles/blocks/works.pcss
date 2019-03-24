@@ -166,9 +166,16 @@ text-decoration: none;
 .slider__item{
   background-size:cover;
   height: 100%;
+  width:100%;
   position:relative;
   outline:2px solid transparent;
-  &:active{
-  outline:2px solid $main-color;
-  }
+  align-items:center;
+  justify-content:center;
+  margin-right:2px;
+ 
 }
+
+  .slider__item.active.slider__item{
+  outline:2px solid $main-color;
+ 
+} 
