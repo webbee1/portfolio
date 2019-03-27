@@ -1,0 +1,28 @@
+footer.footer
+  .container.footer-container
+    .footer__copy 
+      .footer__copy-col
+        .footer__copy-info 2019
+      .footer__copy-desc 
+        .footer__copy-title Владимир Астахов
+        .footer__copy-subtitle Личный сайт веб-разработчика
+    .footer__content
+      .nav__footer
+        ul.nav__footer-list
+          - var nav = ["Главная", "Обо мне", "Навыки", "Работы", "Отзывы", "Связаться"]
+          each item in nav
+            li.nav__footer-item
+              a(href="#").nav__footer-link #{item}
+      .footer__side
+        .footer__right-side 
+          p.footer__right-text Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool
+          .footer__socials
+          ul.footer__socials
+            - var socials = ['insta', 'vk', 'github'];
+            each item in socials
+              li.footer__socials-item
+                a(href="#").footer__socials-link
+                  +icon(item, 'footer__socials-icon')
+        .footer__right-side
+          p.footer__right-text Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает где вы живете 
+          p.footer__text-signature Martin Golding

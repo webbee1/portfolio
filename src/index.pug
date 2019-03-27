@@ -6,75 +6,20 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
-    script (src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js")
+    script(src="https://cdn.jsdelivr.net/npm/vue@269/dist/vue.js")
+    //- link(rel="shortcut icon" href=require('images/favicon.png'))
     title Portfolio | main page
   body
     .wrapper
       .maincontent
         .wellcome-section
-          section.parallax                                    
-            .parallax__layer(data-speed="0.1")
-              +image("content/parallax/clouds.png", "parallax__image", alt="parallax_layer")
-            .parallax__layer(data-speed="0.3")
-              +image("content/parallax/mount.png", "parallax__image", alt="parallax_layer")
-            .parallax__layer(data-speed="0.60")
-              +image("content/parallax/train.png", "parallax__image", alt="parallax_layer")
-            .parallax__layer(data-speed="0.15")
-              +image("content/parallax/foreground_train.png", "parallax__image", alt="parallax_layer")
-            .parallax__layer(data-speed="0.3")
-              +image("content/parallax/grass.png", "parallax__image", alt="parallax_layer")            
-            .parallax__layer(data-speed="0.02")
-              //- +image("content/parallax/shadow.png", "parallax__image", alt="parallax_layer")
-            .parallax__shadow  
-          section.hero-section
+          include ./sections/parallax.pug           
+          section(id="section_1").hero-section
             .container.hero-container
-              header.header
-                .header__logo
-                  a.logo(href="") BA
-                nav.nav
-                  ul.nav__list
-                    - var nav = ["Главная", "Обо мне", "Навыки", "Работы", "Отзывы", "Связаться"]
-                    each item in nav
-                      li.nav__item
-                        a(href="#").nav__link #{item}
-                .header__social
-                  ul.socials
-                    - var socials = ['insta', 'vk', 'github'];
-                    each item in socials
-                      li.socials__item
-                        a(href="#").socials__link
-                          +icon(item, 'socials__icon')
-              .hero__desc
-                .hero__content
-                  .hero__title Личный сайт веб-разработчика
-                  .hero__name Владимир Астаханов
-              .scroll
-                .scroll__text Скролл
-                a(href="#").scroll__icon
-                  +icon('scroll')
-        section.about-section
-            .container.about-container
-              .about-side
-                .about-side__left
-                  .about__desc
-                    +image('content/user.jpg', 'about__ava')
-                  table.about__table
-                    tr.about__table-user
-                      td.about__table-occ Проживаю:
-                      td.about__table-info Новосибирск
-                    tr.about__item
-                      td.about__table-occ Возраст:
-                      td.about__table-info 27 лет
-                    tr.about__item
-                      td.about__table-occ Родился:
-                      td.about__table-info 1 января 1991 
-                .about-side__right
-                  p.about__info Привет, меня зовут
-                  h2.about__info-title Владимир Астаханов
-                  p.about__info-text Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
-                  p.about__info-text.about__info-text--italic Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво! 
-
-        section.skills-section
+              include ./sections/header.pug
+              include ./sections/hero.pug
+        include ./sections/about-section.pug 
+        section(id="section_3").skills-section
           .container.skills-container
             .skills__box
               .skills__box-title Чем я могу быть полезен вам
@@ -141,44 +86,9 @@ html(lang="en")
                           circle(cx="50", cy="50", r="40").circle.circle__under
                           circle(cx="50", cy="50", r="40", style="animation-delay:-60s", stroke="url(#gradient)").circle.circle__above
 
-
-        section.works__section
-          .container.works__container
-            h3.section-title.works__section-title Мои работы
-            .slider
-              .slider__col.slider__col_left
-                .slider__img
-                  +image('userfiles/work_1.jpg', 'slider__pic_big')
-                  ul.slider__list
-                    li.slider__item.slider__item.active
-                      +image('userfiles/prew_1.jpg', 'slider__pic_prew')
-                    li.slider__item
-                      +image('userfiles/prew_2.jpg', 'slider__pic_prew')
-                    li.slider__item
-                      +image('userfiles/prew_3.jpg', 'slider__pic_prew')
-                    li.slider__item
-                      +image('userfiles/prew_4.jpg', 'slider__pic_prew')
-                    .slider__buttons
-                      .arrow__left
-                        +icon('arrow-down', 'arrow__left-icon')
-                      .arrow__right
-                        +icon('arrow-down', 'arrow__right-icon')
-              .slider__col
-                .slider__text
-                  ul.slider__text-list
-                    li.slider__text-item
-                      a(href="#").slider__text-link HTML
-                    li.slider__text-item
-                      a(href="#").slider__text-link CSS
-                    li.slider__text-item
-                      a(href="#").slider__text-link JavaScript
-                .slider__text-title Сайт школы образование
-                .slider__text-desc Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
-                .slider__school
-                  +icon('link', 'slider__school-icon')
-                  a(href="#").slider__school-link Посмотреть сайт
-                
-        section.feedback-section
+        include ./sections/works__section.pug 
+        section(id="section_4").works__section                       
+        section(id="section_5").feedback-section
           .container.feedback-container
             .feedback__decor-right
             .feedback__about
@@ -205,7 +115,7 @@ html(lang="en")
 
                   li.feedback__comment-item
                     .quote
-                      .quote__info Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
+                      .quote__info Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах
                       .info__desc
                         .info__ava
                             .info__wrap
@@ -214,54 +124,10 @@ html(lang="en")
                         .info__desc__person
                           .persone__name Владимир Сабанцев
                           .persone__post Преподаватель  
+            include ./sections/feedback__form.pug
+      include ./sections/footer.pug 
+    
+    include ./templates/entry.pug
 
-            .feedback__form
-              .form__title.section-title Связаться со мной
-              form.form
-                .form__row
-                  label.form-box Введите ваше имя
-                      .form-box__content
-                        +icon("user", "form-box__icon")
-                        .form-box__field
-                        input.form__input(type="text", placeholder="Ковальчук Дмитрий")
-                  label.form-box Введите ваш email
-                      .form-box__content
-                        +icon("envelope", "form-box__icon")
-                        .form-box__field
-                        input.form__input(type="text", placeholder="loftschool@study.com")
-                .form__row.form__row--big
-                  label.form-box Сообщение к письму
-                      .form-box__content
-                        +icon("message", "form-box__icon")
-                        .form-box__field
-                        textarea.form__input.form__input--big(type="text", placeholder="Требуется ваша помощь в создании сайта. Интересуют сроки и цена вопроса")
-                .form__row
-                  input.form-btn(type="submit" value="Отправить")
-      footer.footer
-        .container.footer-container
-          .footer__copy 
-            .footer__copy-col
-              .footer__copy-info 2019
-            .footer__copy-desc 
-                .footer__copy-title Владимир Астахов
-                .footer__copy-subtitle Личный сайт веб-разработчика
-          .footer__content
-            .nav__footer
-              ul.nav__footer-list
-                - var nav = ["Главная", "Обо мне", "Навыки", "Работы", "Отзывы", "Связаться"]
-                each item in nav
-                  li.nav__footer-item
-                    a(href="#").nav__footer-link #{item}
-            .footer__side
-              .footer__right-side 
-                p.footer__right-text Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool
-                .footer__socials
-                ul.footer__socials
-                  - var socials = ['insta', 'vk', 'github'];
-                  each item in socials
-                    li.footer__socials-item
-                      a(href="#").footer__socials-link
-                        +icon(item, 'footer__socials-icon')
-              .footer__right-side
-                p.footer__right-text Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает где вы живете 
-                p.footer__text-signature Martin Golding
+
+    

@@ -5,8 +5,7 @@ section.about-section{
   z-index:50;
   line-height:30px;
   height:100vh;
-
-position:relative;
+  position:relative;
 }
 .about-container{
   display:flex;
@@ -14,7 +13,7 @@ position:relative;
   margin-bottom:80px;
   justify-content: center;
   min-height:650px;
-padding:0 10%;
+  padding:0 10%;
 
 
 
@@ -38,13 +37,24 @@ padding:0 10%;
 
 .about-side{
 display:flex;
-/* width:80%; */
 margin:auto;
 height:100%;
 flex-direction:row;
 align-items:center;
 justify-content:space-between;
 
+@include phones{
+  flex-direction:column;
+  align-items:center;
+  justify-content:Center;
+  width:100%;
+  font-size:14px;
+  }
+
+@include tablets{
+    
+    padding:0 1%;
+  }
 }
 
 .about-side__right{
@@ -56,6 +66,8 @@ justify-content:space-between;
   display:flex;
   flex-direction:column;
   align-items:center;
+  
+
 }
 
 .about__table{

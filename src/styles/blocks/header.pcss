@@ -2,12 +2,34 @@
   width:100%;
   justify-content: space-between;
   padding:20px 0;
-
+  z-index:100;
   display:flex;
- 
- 
-  /* margin-bottom:50px; */
-  &__logo{
-    line-height:35px;
+
+  @include tablets{
+    max-width:100%;
+    justify-content:center;
+    align-items:center;
+  }
+
+  @include phones{
+    justify-content:space-around;
+    align-items:center;
+
+    
+  }
+}
+
+
+.header__logo{
+  line-height:35px;
+  @include tablets{
+      flex-grow:1;
+      font-size:36px;
+      
+   @include phones{
+   
+      font-size:36px;
+   
+  }
   }
 }

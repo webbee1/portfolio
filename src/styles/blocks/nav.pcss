@@ -1,11 +1,15 @@
-.nav, .nav__footer{
+.nav{
 font-weight:400;
 justify-content:center;
 
   @include tablets {
     display: none;
   }
+  @include phones {
+  padding:10% 0;
+  }
 }
+
 .nav__list{
   display:flex;
   justify-content:center;
@@ -45,4 +49,13 @@ justify-content:center;
 .nav__footer-list{
   display:flex;
   
+}
+
+.nav__footer{
+font-weight:400;
+justify-content:center;
+
+  @include tablets {
+    display: none;
+  }
 }
