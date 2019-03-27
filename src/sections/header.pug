@@ -8,15 +8,15 @@ header.header
         li.nav__item
           a(href="#").nav__link #{item}
 
-                        
-  .header__social
-    ul.socials
-      - var socials = ['insta', 'vk', 'github'];
-      each item in socials
-        li.socials__item
-          a(href="#").socials__link
-            +icon(item, 'socials__icon')
-  .hamburger__btn(#hamburger__menu)
-    span.line
-    span.line
-    span.line         
+  .header__right                     
+    .header__social
+      ul.socials
+        - var socials = ['insta', 'vk', 'github'];
+        each item in socials
+          li.socials__item
+            a(href="#").socials__link
+              +icon(item, 'socials__icon')
+    .hamburger__btn(#hamburger__menu)
+      span.line
+      span.line
+      span.line         

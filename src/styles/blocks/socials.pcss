@@ -2,41 +2,41 @@
   display:flex;
   justify-content:space-evenly;
   align-items:center;
+
   @include tablets{
     flex-direction:row;
-    min-width:300px;
-    align-content:flex-end;
+    justify-content:space-between;
   }
+ 
 }
 
 .socials__icon{
   width:28px;
   height:25px;
   fill:$icon-color;
-
-   &:hover{
+    &:hover{
   fill: $main-color;
   transition: .6s;
   }
+
   @include phones {
     display: none;
   }
+
    @include tablets {
     width:30px;
     height:26px;
-    
   }
 }
 .socials__item{
   margin-right:25px;
 
-   @include tablets {
+    @include tablets {
     flex-direction:column;
-   justify-content:flex-end;
-   
+    margin-right:30px;
   }
   
-  &:last-child{
+    &:last-child{
     margin-right:0;
   }
 }

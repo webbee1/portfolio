@@ -1,35 +1,36 @@
 .header{
   width:100%;
-  justify-content: space-between;
   padding:20px 0;
+  justify-content: space-between;
   z-index:100;
   display:flex;
 
-  @include tablets{
-    max-width:100%;
-    justify-content:center;
-    align-items:center;
-  }
-
   @include phones{
-    justify-content:space-around;
+    justify-content:space-between;
     align-items:center;
-
-    
+    min-width:100%;
   }
 }
 
-
 .header__logo{
   line-height:35px;
+
   @include tablets{
-      flex-grow:1;
       font-size:36px;
+   @include phones{
+      font-size:36px;
+  }
+  }
+}
+
+.header__right{
+  display: flex;
+
+  @include tablets{
+  align-items:center;
       
    @include phones{
-   
       font-size:36px;
-   
   }
   }
 }

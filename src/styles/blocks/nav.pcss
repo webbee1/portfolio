@@ -1,31 +1,35 @@
 .nav{
-font-weight:400;
-justify-content:center;
+  display: flex;
+  font-weight:400;
+  justify-content:center;
+  padding:0 2%;
+  justify-content: flex-end;
+  white-space: nowrap;
 
   @include tablets {
     display: none;
   }
-  @include phones {
-  padding:10% 0;
-  }
+  
 }
 
 .nav__list{
   display:flex;
-  justify-content:center;
 }
 
 .nav__link, .nav__footer-link{
   white-space: nowrap;
+  justify-content:space-between;
+
 }
 
 .nav__list .nav__item, 
 .nav__footer-list .nav__footer-item{
   display:flex;
-  margin:0 40px;
+  margin-right: 40px;
   align-content:center;
   height:50px;
   border-bottom:1px solid transparent;
+
   &:hover{
     border-bottom:2px solid $main-color;
     transition: .6s;
@@ -37,8 +41,8 @@ justify-content:center;
   margin-right:0;
   }
   
-  .nav__item:first-child,
-  .nav__footer-item:first-child{
+.nav__item:first-child,
+.nav__footer-item:first-child{
   margin-left:0;
   }
 
@@ -48,7 +52,6 @@ justify-content:center;
 
 .nav__footer-list{
   display:flex;
-  
 }
 
 .nav__footer{

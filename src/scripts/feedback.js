@@ -1,8 +1,8 @@
 import Vue from 'vue';
 
 new Vue({
-  el: "#feedback-component",
-  template:"#feedback",
+  el: "#feedback",
+  template:"#-component",
   data() {
       return {
         feedback: [],
@@ -70,8 +70,8 @@ new Vue({
         }
     },
     created() {
-        const feedback = require("../data/feedback.json");
-        this.feedback = this.arrWithRequiredImages(feedback);
+        const data = require("../data/feedback.json");
+        this.feedback = this.arrWithRequiredImages(data);
     },
     mounted() {
         this.resetSliderOnResize();
