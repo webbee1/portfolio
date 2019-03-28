@@ -1,21 +1,36 @@
 .footer{
-  width:100%;
-  background:$footer-color;
+width:100%;
+background:$footer-color;
 bottom:0;
 left:0;
 right:0;
-
-  padding:5% 0;
+padding:5% 0;
 }
 
 .footer-container{
 display:flex;
 justify-content:space-evenly;
+@include phones{
+  flex-direction:column;
+}
 }
 
 .footer__copy{
   display:flex;
   justify-content:space-between;
+  @include desktop{
+    flex-direction:column;
+    width:30%;
+    line-height:1.67;
+    @include tablets{
+      max-height:250px;
+    }
+    @include phones{
+      display:flex;
+      width:100%;
+    
+    }
+  }
 
     &-info{
   color:$icon-color;
@@ -33,9 +48,20 @@ justify-content:space-evenly;
 
 .footer__copy-desc{
   width:40%;
+  @include tablets{
+    width:60%;
+    margin-bottom:30px;
+    @include phones{
+      width:100%;
+      text-align:center;
+    }
+  }
 }
 .footer__copy-col{
   flex:1;
+  @include phones{
+    margin:auto;
+  }
 }
  .footer__copy-title{
    color:$text-color;
@@ -52,10 +78,17 @@ justify-content:space-evenly;
 
 .footer__content{
   width:65%;
-  
+  @include phones{
+    width:70%;
+    margin:auto;
+    justify-content:space-between;
+  }
   }
   .footer__right-side{
     width:45%;
+    @include tablets{
+      width:100%;
+    }
   }
   .footer__right-text{
     margin-bottom:50px;
@@ -71,4 +104,11 @@ justify-content:space-evenly;
   .footer__side{
     display:flex;
   justify-content:space-between;
+  @include tablets{
+    flex-direction:column;
+    width:100%;
+  }
+  @include phones{
+    width:90%;
+  }
   }

@@ -48,17 +48,22 @@
 
 .nav__footer{
   margin-bottom:50px;
+  width:80%;
+   @include tablets{
+    width:93%;
+  }
 }
 
 .nav__footer-list{
   display:flex;
+  justify-content: space-between;
+  @include tablets{
+    flex-wrap:wrap;
+    justify-content:flex-start;
+  }
 }
 
 .nav__footer{
 font-weight:400;
 justify-content:center;
-
-  @include tablets {
-    display: none;
-  }
 }

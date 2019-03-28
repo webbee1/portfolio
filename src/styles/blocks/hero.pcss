@@ -10,7 +10,10 @@ section.hero-section{
 .hero__content{
   display:flex;
   flex-direction:row;
-    @include tablets{
+ padding:1% 2%;
+ 
+  @include tablets{
+      width:43%;
       text-align:center;
       flex-direction:column;
   }
@@ -55,9 +58,9 @@ section.hero-section{
   word-wrap: break-word;
 
     @include tablets{
-      line-height:1.4;
+     margin:0 auto;
       text-align:center;
-      white-space:nowrap;
+     padding-bottom:20px;
 }
 
 @include phones{
@@ -77,6 +80,7 @@ section.hero-section{
       @include tablets{
         font-size:48px;
         margin:0 auto;
+      line-height:1;
        }
 
         @include phones{

@@ -6,6 +6,10 @@ section.skills-section{
   display:flex;
   flex-direction:row;
   min-height:650px;
+  @include tablets{
+    padding-bottom:300px;
+  }
+  
 }
 .skills-container{
   position:relative;
@@ -24,6 +28,13 @@ section.skills-section{
     width:70%;
     left:-15%;
     bottom:-20%;
+    @include tablets{
+      width:50%;
+
+      transform: rotate(-90deg) translateY(-30%);
+      left: 40%;
+    bottom: -55%
+    }
   }
 }
 
@@ -33,8 +44,8 @@ section.skills-section{
   height: 150px;
 
   @include tablets {
-    width: 135px;
-    height: 135px;
+    width: 140px;
+    height: 140px;
   }
 }
 
@@ -47,10 +58,12 @@ section.skills-section{
   font-weight:700;
   color:$half-white;
   padding: 4px;
-  white-space:nowrao;
+  
 
-  @include phones {
+  @include tablets {
     font-size: 16px;
+  padding:2px;
+  white-space:wrap;
   }
 }
 
@@ -60,6 +73,12 @@ section.skills-section{
   padding:1% 0;
   text-align:left;
   color:$text-color;
+  @include tablets {
+    font-size:18px;
+    line-height:2.67;
+    text-align:center;
+    padding:2% 0;
+}
 }
 
 .skills-row__list {
@@ -70,8 +89,9 @@ section.skills-section{
   justify-content:space-around;
   flex-wrap:wrap;
   padding-bottom:60px;
-  @include phones {
-    justify-content: center;
+  @include tablets {
+    margin:auto;
+    flex-wrap:nowrap;
   }
 }
 
@@ -85,15 +105,41 @@ section.skills-section{
   justify-content:flex-end;
   padding:2% 0;
   width:85%;
+  @include tablets {
+    width:90%;
+   justify-content:center;
+   margin:auto;
+  padding:0;
+}
 }
 
  .skills__right-desc{
   padding:0 1%;
   width:65%;
+  
+  @include tablets {
+    width:100%;
+}
+  @include phones {
+    width:100%;
+}
 } 
 
 .skills__box{
   width: 45%;
   margin: 0 auto;
   padding:6% 0 3% ;
+  @include tablets {
+    width:80%;
+}
+}
+
+.skills__info{
+  margin:0 auto;
+  line-height: 1.8;
+  color:$half-white;
+  @include tablets {
+    width:95%;
+    text-align:center;
+}
 }

@@ -17,13 +17,18 @@ section.feedback-section{
     flex-direction: column;
     justify-content: flex-start;
     margin-bottom:5%;
-   
-     
+    @include tablets{
+      padding:0 2%;
+    }
 }
 
 .feedback__about{
     width: 80%;
     padding: 6% 0;
+    @include tablets{
+      width: 80%;
+      margin:auto;
+    }
 }
 .feedback__decor-right{
   background-image:url("../images/content/leafage.png");

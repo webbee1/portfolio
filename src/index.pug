@@ -26,12 +26,17 @@ html(lang="en")
               p.skills__info Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
             .skills__right  
               #skills-component
-        include ./sections/works__section.pug 
+        section.work__section
+          .container.works__container
+            h3.section-title.works__section-title Мои работы
+            .works__content 
+              #slider-component
         section(id="section_4").works__section                       
         section(id="section_5").feedback-section
           .container.feedback-container
             .feedback__decor-right          
-            #feedback-component       
+            #feedback-component
+            .form__title.section-title Связаться со мной       
             include ./sections/feedback__form.pug
       include ./sections/footer.pug     
     include ./templates/entry.pug

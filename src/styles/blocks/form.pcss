@@ -2,14 +2,27 @@
   display:flex;
   flex-direction:column;
   width:80%;
+  @include tablets{
+    width:95%;
+    margin:0 auto;
+   justify-content:center;
+  }
 }
-
+.feedback__form{
+  display:flex;
+  justify-content:center;
+  width:100%;
+}
 .form__title{
   font-weight:700;
   font-size:36px;
-  margin-right:10%;
   margin-bottom:50px;
+  @include tablets{
+    display:inline-flex;
+  justify-content:center;
+  }
 }
+
 .form__row{
   display:flex;
   margin-bottom:30px;
@@ -32,6 +45,9 @@
   flex:1;
   color:$icon-color;
   margin-right:70px;
+  @include tablets{
+    margin:0 30px;
+  }
 }
 
 .form__input, .form__row--big{
@@ -58,7 +74,10 @@
   color: $text-color;
   cursor:pointer;
   outline:none;
-
+@include tablets{
+  justify-content:center;
+  margin:auto;
+}
   &:active{
     background-image: linear-gradient(-90deg, #ea7400, #f29400);
   }
