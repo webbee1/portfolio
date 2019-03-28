@@ -89,45 +89,11 @@ html(lang="en")
         include ./sections/works__section.pug 
         section(id="section_4").works__section                       
         section(id="section_5").feedback-section
-          //-  #feedback-component
           .container.feedback-container
-            .feedback__decor-right
-            .feedback__about
-              .feedback__top
-                h4.feedback__section-title Что обо мне говорят
-                .feedback__button
-                  button.button.feedback__btn.feedback__btn_prew
-                    +icon('arrow-down','feedback__btn-icon')              
-                  button.button.feedback__btn.feedback__btn_next
-                    +icon('arrow-down','feedback__btn-icon')
-              .feedback__comment
-                ul.feedback__comment-list
-                  li.feedback__comment-item
-                    .quote
-                      .quote__info Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
-                      .info__desc
-                        .info__ava
-                            .info__wrap
-                              .info__ava-img
-                                +image('content/kovaldn.jpg', 'info__ava-img')
-                        .info__desc__person
-                          .persone__name Ковальчук Дмитрий
-                          .persone__post Основатель Loftschool
-
-                  li.feedback__comment-item
-                    .quote
-                      .quote__info Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах
-                      .info__desc
-                        .info__ava
-                            .info__wrap
-                              .info__ava-img
-                                +image('content/wowua.jpg', 'info__ava-img')
-                        .info__desc__person
-                          .persone__name Владимир Сабанцев
-                          .persone__post Преподаватель  
+            .feedback__decor-right          
+            #feedback-component       
             include ./sections/feedback__form.pug
-      include ./sections/footer.pug 
-    
+      include ./sections/footer.pug     
     include ./templates/entry.pug
 
 

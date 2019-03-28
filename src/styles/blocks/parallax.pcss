@@ -85,6 +85,7 @@
       top:32%;
     left:-6%;
     transform: translateX(-230px); 
+    
     }
   }
 
@@ -119,27 +120,48 @@
     }
   }
 }
-/* 
-.parallax__image {
-  max-width: initial;
-  max-height: initial;
-  position: absolute;
-} */
 
-
-@media (max-width: 1200px){
+@media (max-width: 1100px){
     .parallax__layer{
-        &:nth-child(8){
-            top:55%;
+        
+        &:nth-child(6){
+            .parallax__image{
+               top:35%;
+            }
+        }
+    
+    }
+}
+
+@media (max-width: 1300px){
+    .parallax__image{
+        &:nth-child(6){
+            top:35%;
+            border:3px solid red;
         }
          
 
         
     }
 } 
+.parallax__layer:nth-child(6) .parallax__image{
+@include desktop{
+      top:36%;
+    }
+   
+}
 
-
-
+@media (max-width: 1800px){
+    .parallax__layer{
+        
+        &:nth-child(6){
+            .parallax__image{
+                top:35%
+            }
+        }
+    
+    }
+}
 
 /* 
 .parallax__shadow{

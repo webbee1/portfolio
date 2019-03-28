@@ -17,12 +17,13 @@ section.feedback-section{
     flex-direction: column;
     justify-content: flex-start;
     margin-bottom:5%;
+   
      
 }
 
 .feedback__about{
-  width:80%;
-  padding:6% 0;
+    width: 80%;
+    padding: 6% 0;
 }
 .feedback__decor-right{
   background-image:url("../images/content/leafage.png");
@@ -37,22 +38,26 @@ section.feedback-section{
 .feedback__section-title{
   font-weight:700;
   font-size:36px;
-  margin-right:10%;
+  margin-right:70px;
 }
 
 
 .feedback__top{
-  display:flex;
+display:inline-flex;
+vertical-align:middle;
+flex-wrap:nowrap;
 margin-bottom:7%;
 }
 
 .feedback__button{
-  display:flex;
+  display:inline-flex;
   flex-direction: row;
   align-self: center;
+  
+  height:50px;
 }
 
-.feedback__btn{
+button.feedback__btn{
   width:50px;
   height:50px;
   background-color:transparent;
@@ -60,6 +65,7 @@ margin-bottom:7%;
   position:relative;
   border-radius:100%;
   margin-right:30px;
+  outline:none;
     &:last-child{
       margin-right:0;
     }
@@ -76,28 +82,51 @@ margin-bottom:7%;
   cursor:pointer;
   transform:translate(-50%, -50%);
   fill:#fff;
-}
 
+}
+.feedback__comment{
+  overflow:hidden;
+}
 .feedback__comment-list{
   display:flex;
   align-items:flex-start;
-  width:80%;
-  padding:10px;
-  overflow:hidden;
-}
-
-.feedback__comment-item{
-  width:45%;
-  margin-right:50px;
-  flex-shrink:0;
-
-  &:last-child{
-    margin-right:0;
+  will-change: transform;
+  transition: transform .3s;
+  @include tablets {
+    margin-left: 0;
+  }
+  @include phones {
+    width: 100%;
+    margin-left: 0;
   }
 }
 
+.feedback__comment-item{
+  flex-shrink: 0;
+  padding-right: 30px;
+  width: 50%;
 
+  @include phones {
+    margin-right: 0;
+    width: 100%;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+
+}
 
 .feedback__btn.feedback__btn_prew{
   transform: rotate(180deg); 
+}
+
+.person__name{
+  font-size:18px;
+  line-height:48px;
+  font-weight:600;
+}
+
+.person__post{
+  font-size:16px;
+  color:$icon-color;
 }
