@@ -24,68 +24,8 @@ html(lang="en")
             .skills__box
               .skills__box-title Чем я могу быть полезен вам
               p.skills__info Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
-            .skills__right
-              .skills__right-desc
-                ul.skills-group__list 
-                  li.skills-group__item
-                    .skills-group__title Front-end
-                    ul.skills__list
-                      li.skills__item
-                        .skill-item__title HTML5
-                        svg.percentage(viewBox="0 0 100 100", preserveAspectRatio="none")
-                          circle(cx="50", cy="50", r="40").circle.circle__under
-                          circle(cx="50", cy="50", r="40", style="animation-delay:-85s", stroke="url(#gradient)").circle.circle__above
-                          linearGradient(id="gradient" x1="0%" y1="0%" x2="100%" y2="0%")
-                            stop(offset="0%" stop-color ="#ea7400")
-                            stop(offset="100%" stop-color = "#f29400")
-
-
-                      li.skills__item
-                        .skill-item__title CSS3
-                        svg.percentage(viewBox="0 0 100 100", preserveAspectRatio="none")
-                          circle(cx="50", cy="50", r="40").circle.circle__under
-                          circle(cx="50", cy="50", r="40", style="animation-delay:-80s", stroke="url(#gradient)").circle.circle__above
-
-                      li.skills__item
-                        .skill-item__title Javascript
-                        svg.percentage(viewBox="0 0 100 100", preserveAspectRatio="none")
-                          circle(cx="50", cy="50", r="40").circle.circle__under
-                          circle(cx="50", cy="50", r="40", style="animation-delay:-1250s", stroke="url(#gradient)").circle.circle__above
-
-                      li.skills__item
-                        .skill-item__title Jquery и Vue.js
-                        svg.percentage(viewBox="0 0 100 100", preserveAspectRatio="none")
-                          circle(cx="50", cy="50", r="40").circle.circle__under
-                          circle(cx="50", cy="50", r="40", style="animation-delay: -120s", stroke="url(#gradient)").circle.circle__above      
-                 
-                
-                  li.skills-group__item
-                    .skills-group__title Workflow
-                    ul.skills__list
-                      li.skills__item
-                        .skill-item__title GIT
-                        svg.percentage(viewBox="0 0 100 100", preserveAspectRatio="none")
-                          circle(cx="50", cy="50", r="40").circle.circle__under
-                          circle(cx="50", cy="50", r="40", style="animation-delay:-50s", stroke="url(#gradient)").circle.circle__above
-
-                      li.skills__item
-                        .skill-item__title Terminal
-                        svg.percentage(viewBox="0 0 100 100", preserveAspectRatio="none")
-                          circle(cx="50", cy="50", r="40").circle.circle__under
-                          circle(cx="50", cy="50", r="40", style="animation-delay:-70s", stroke="url(#gradient)").circle.circle__above
-
-                      li.skills__item
-                        .skill-item__title Gulp
-                        svg.percentage(viewBox="0 0 100 100", preserveAspectRatio="none")
-                          circle(cx="50", cy="50", r="40").circle.circle__under
-                          circle(cx="50", cy="50", r="40", style="animation-delay:-60s", stroke="url(#gradient)").circle.circle__above
-
-                      li.skills__item
-                        .skill-item__title Webpack
-                        svg.percentage(viewBox="0 0 100 100", preserveAspectRatio="none")
-                          circle(cx="50", cy="50", r="40").circle.circle__under
-                          circle(cx="50", cy="50", r="40", style="animation-delay:-60s", stroke="url(#gradient)").circle.circle__above
-
+            .skills__right  
+              #skills-component
         include ./sections/works__section.pug 
         section(id="section_4").works__section                       
         section(id="section_5").feedback-section
