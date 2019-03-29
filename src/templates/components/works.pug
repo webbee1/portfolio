@@ -4,7 +4,8 @@ script(type="text/x-template")#slider-container
             :works="works",
             :currentWork = "currentWork",
             :currentIndex="currentIndex",
-            @slide = "handleSlide"
+            @slide = "handleSlide",
+            @select="selectWork"
         )
         info(
             :currentWork="currentWork"
@@ -21,7 +22,8 @@ script(type="text/x-template")#slider-display
                 )
                 thumbs(
                     :works="works",
-                    :currentWork="currentWork"
+                    :currentWork="currentWork",
+                    @select="workId => $emit('select', workId)"
                 )
                 
 

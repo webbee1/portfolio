@@ -11,6 +11,7 @@
   "icon-color": "rgba(255, 255, 255, 0.4)",
   "half-white": "rgba(255, 255, 255, 0.5)",
   "accent-color": "rgba(255, 0, 0, 0.1)",
+  "bp-super-wide": "2800px",
   "bp-desktop-hd": "1800px",
   "bp-desktop": "1200px",
   "bp-tablets": "768px",

@@ -74,7 +74,7 @@ new Vue({
   methods: {
     makeInfiniteLoopForCurIndex(value) {
       const worksAmount = this.works.length - 1;
-      if (value > this.works.length) this.currentIndex = 0;
+      if (value > worksAmount) this.currentIndex = 0;
       if (value < 0) this.currentIndex = worksAmount;
     },
 
