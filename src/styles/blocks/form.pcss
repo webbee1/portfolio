@@ -6,12 +6,25 @@
     width:95%;
     margin:0 auto;
    justify-content:center;
-  }
+   @include phones{
+    width: 95%;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom:50px;
 }
+   }
+  }
 .feedback__form{
   display:flex;
   justify-content:center;
   width:100%;
+  
+     @include phones {
+    flex-wrap:wrap;
+    width:100%;
+  }
 }
 .form__title{
   font-weight:700;
@@ -26,12 +39,23 @@
 .form__row{
   display:flex;
   margin-bottom:30px;
+  
+     @include phones {
+flex-direction:column;
+display:inline-flex;
+width:100;
+margin:auto;
+  }
 }
 
 .form-box__content{
   display:flex;
   align-items:center;
   border-bottom:1px solid $text-color;
+  
+     @include phones {
+    display:inline-flex;
+  }
 }
 
 .form-box__icon{
@@ -57,6 +81,7 @@
   padding:25px 0;
   background:transparent;
   outline:none;
+
 }
 .form__input::-webkit-input-placeholder{
   color: $text-color;

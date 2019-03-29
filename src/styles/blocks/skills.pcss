@@ -9,7 +9,10 @@ section.skills-section{
   @include tablets{
     padding-bottom:300px;
   }
-  
+   /* @include phones{
+    padding-bottom:210px;
+
+  } */
 }
 .skills-container{
   position:relative;
@@ -24,16 +27,27 @@ section.skills-section{
     position:absolute;
     background: url("../images/content/hands.png") left bottom no-repeat;
     background-size:contain;
-    height:80%;
-    width:70%;
-    left:-15%;
-    bottom:-20%;
-    @include tablets{
-      width:50%;
+    background-attachment: local;
+    min-height:593px;
+    min-width:364px;
+    left:0%;
+    bottom:0%;
+    transform:translate(-60%);
+    margin-bottom:-15%;
+    overflow:hidden;
 
-      transform: rotate(-90deg) translateY(-30%);
-      left: 40%;
-    bottom: -55%
+    @include tablets{
+      width:480px;
+    transform: rotate(-90deg) translate(-54%);
+    margin-left: 40%;
+
+
+      
+    }
+    @include phones{
+    transform: rotate(-90deg) translate(-84%);
+    margin-left: -40%;
+
     }
   }
 }
@@ -93,6 +107,11 @@ section.skills-section{
     margin:auto;
     flex-wrap:nowrap;
   }
+  @include phones {
+    margin:auto;
+    flex-wrap:wrap;
+    padding-bottom:30px;
+  }
 }
 
 .skills-row__item {
@@ -129,8 +148,12 @@ section.skills-section{
   width: 45%;
   margin: 0 auto;
   padding:6% 0 3% ;
+
   @include tablets {
     width:80%;
+}
+@include phones{
+  width:90%;
 }
 }
 
@@ -141,5 +164,8 @@ section.skills-section{
   @include tablets {
     width:95%;
     text-align:center;
+}
+@include phones{
+  text-align:left;
 }
 }

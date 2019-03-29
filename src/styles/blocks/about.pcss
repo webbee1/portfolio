@@ -16,6 +16,10 @@ section.about-section{
   @include tablets{
     padding:0 2%;
   }
+  @include phones{
+border:1px solid blue;
+min-height:100vh;
+  }
 }
 
 .about__desc{
@@ -31,17 +35,25 @@ section.about-section{
   @include tablets{
     margin-bottom:18%;
   }
+  @include phones{
+    margin-bottom:0;
+    display:flex;
+    margin:auto;
+    width: 170px;
+    height:170px;
+  }
 }
 
 .about__ava{
   display:inline-flex;
   margin:auto;
+  
 }
 
 .about-side{
 display:flex;
 margin:auto;
-height:100%;
+height:90%;
 flex-direction:row;
 align-items:center;
 justify-content:space-between;
@@ -49,9 +61,13 @@ justify-content:space-between;
     @include phones{
   flex-direction:column;
   align-items:center;
-  justify-content:Center;
+  justify-content:center;
   width:100%;
   font-size:14px;
+  }
+  @include phones{
+    flex-direction:column;
+    justify-content:center;
   }
 }
 
@@ -59,6 +75,10 @@ justify-content:space-between;
   width:55%;
     @include tablets{
   width:57%;
+  }
+  @include phones{
+    width:85%;
+    margin-bottom:15%;;
   }
 }
 
@@ -72,14 +92,26 @@ justify-content:space-between;
   display:flex;
   flex-direction:column;
   }
+  @include phones{
+    width:100%;
+    display:block;
+
+  }
 }
 
 .about__table{
 width:67%;
 padding:50px 0;
   @include tablets{
-width:100%;
+width:85%;
 padding:0;
+}
+@include phones{
+ justify-content:center;
+  align-items:center;
+  width:100%;
+  padding-left:20%;
+  margin-bottom:40px;
 }
 }
 
@@ -93,18 +125,27 @@ padding:0;
     @include tablets{
   line-height:2.14;
   }
+  @include phones{
+    font-size:16px;
+
+  }
 }
 .about__info-text{
   color:$icon-color;
   line-height:30px;
   margin-bottom:80px;
   font-weight:400;
+  @include phones{
+      font-size:14px;
+      margin-bottom:30px;
+    }
 
     &:last-child{
     margin-bottom:0;
     @include tablets{
        margin-bottom:50px;
     }
+    
   }
 
   &--italic{
@@ -122,6 +163,12 @@ padding:0;
   padding:30px 0;
   white-space:nowrap;
   }
+  @include phones{
+    text-align:left;
+    white-space:wrap;
+    font-size:30px;
+    padding:8% 0;
+  }
 }
 
 .about__info-text:after{
@@ -137,5 +184,8 @@ top:61%;
   @include tablets{
   left:37%;
   top:63%;
+  }
+  @include phones{
+    display:none;
   }
 }
