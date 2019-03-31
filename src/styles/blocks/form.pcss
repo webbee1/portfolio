@@ -1,13 +1,13 @@
 .form{
   display:flex;
   flex-direction:column;
-  width:80%;
+  width:63%;
   @include tablets{
     width:95%;
     margin:0 auto;
    justify-content:center;
    @include phones{
-    width: 95%;
+    
     margin: 0 auto;
     justify-content: center;
     align-items: center;
@@ -18,7 +18,6 @@
   }
 .feedback__form{
   display:flex;
-  justify-content:center;
   width:100%;
   
      @include phones {
@@ -30,8 +29,8 @@
   font-weight:700;
   font-size:36px;
   margin-bottom:50px;
-  @include tablets{
     display:inline-flex;
+  @include tablets{
   justify-content:center;
   }
 }
@@ -43,7 +42,7 @@
      @include phones {
 flex-direction:column;
 display:inline-flex;
-width:100;
+width:100%;
 margin:auto;
   }
 }
@@ -54,7 +53,7 @@ margin:auto;
   border-bottom:1px solid $text-color;
   
      @include phones {
-    display:inline-flex;
+    display:flex;
   }
 }
 
@@ -112,4 +111,8 @@ textarea {
 }
 input[placeholder] {
   text-overflow:ellipsis;
+}
+
+.form__title.section-title{
+  margin-bottom:86px;
 }

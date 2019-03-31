@@ -6,4 +6,3 @@ scrollBtn.addEventListener("click", e => {
 
   reqBlock.scrollIntoView({ block: "center", behavior: "smooth" });
 });
-console.log("12345");

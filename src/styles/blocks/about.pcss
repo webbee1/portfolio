@@ -3,8 +3,11 @@ section.about-section{
   font-weight:500;
   z-index:50;
   line-height:30px;
-  height:100vh;
+  /* height:100vh; */
   position:relative;
+  @include desktop{
+margin-top:-26%;
+  }
 }
 .about-container{
   display:flex;
@@ -12,7 +15,11 @@ section.about-section{
   margin-bottom:80px;
   justify-content: center;
   min-height:650px;
-  padding:0 10%;
+  width: 56%;
+  @include desktop{
+    width:590%;
+    padding: 0 1%;
+  }
   @include tablets{
     padding:0 2%;
   }
@@ -30,7 +37,7 @@ min-height:100vh;
   height:200px;
   overflow:hidden;
   border-radius:100%;
-  margin-bottom:8%;
+  margin-bottom:1%;
   @include tablets{
     margin-bottom:18%;
   }
@@ -54,16 +61,17 @@ display:flex;
 margin:auto;
 height:90%;
 flex-direction:row;
-align-items:center;
 justify-content:space-between;
+padding:3% 0;
 
     @include phones{
   flex-direction:column;
-  align-items:center;
+  
   justify-content:center;
   width:100%;
   font-size:14px;
   }
+  
   @include phones{
     flex-direction:column;
     justify-content:center;
@@ -72,6 +80,9 @@ justify-content:space-between;
 
 .about-side__right{
   width:55%;
+  @include desktop{
+    width:57%;
+  }
     @include tablets{
   width:57%;
   }
@@ -99,8 +110,8 @@ justify-content:space-between;
 }
 
 .about__table{
-width:67%;
-padding:50px 0;
+width:85%;
+padding:65px 0;
   @include tablets{
 width:85%;
 padding:0;
@@ -115,7 +126,8 @@ padding:0;
 }
 
 .about__table-occ{
-  padding:10px;
+  padding-bottom:2%;
+  padding-right:5%;
   color:$icon-color;
 }
 
@@ -162,6 +174,9 @@ padding:0;
   padding:30px 0;
   white-space:nowrap;
   }
+  @include desktop{
+    padding:18px 0;
+  }
   @include phones{
     text-align:left;
     white-space:wrap;
@@ -169,7 +184,11 @@ padding:0;
     padding:8% 0;
   }
 }
-
+.about__info-text{
+  @include desktop{
+    width:70%;
+  }
+}
 .about__info-text:after{
 content:'*';
 font-size:48px;
@@ -178,8 +197,12 @@ width:20px;
 height:20px;
 display:inline-block;
 position:absolute;
-left:44%;
-top:61%;
+left: 44%;
+top: 47%;
+@include desktop{
+      left: 38%;
+    top: 50%;
+}
   @include tablets{
   left:37%;
   top:63%;

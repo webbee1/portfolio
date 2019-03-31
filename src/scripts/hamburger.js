@@ -7,4 +7,4 @@ var btn = document.querySelector('.hamburger__btn');
       btn.classList.toggle('active'); 
     });
 
-    console.log("fuck you!");
+  

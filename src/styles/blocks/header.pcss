@@ -1,9 +1,11 @@
 .header{
   width:100%;
-  padding:20px 0;
   justify-content: space-between;
   z-index:100;
   display:flex;
+  @include desktop{
+    padding:24px 0;
+  }
 
   @include phones{
     justify-content:space-between;
@@ -15,6 +17,9 @@
 .header__logo{
   line-height:35px;
 
+   @include desktop{
+    padding-left:3%;
+  }
   @include tablets{
       font-size:36px;
    @include phones{
@@ -25,7 +30,11 @@
 
 .header__right{
   display: flex;
-
+  justify-content:flex-end;
+   @include desktop{
+   width:20%;
+   padding-right:1%;
+  }
   @include tablets{
   align-items:center;
       

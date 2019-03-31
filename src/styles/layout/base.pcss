@@ -39,15 +39,22 @@ body {
   max-width: 1480px;
   width: 95%;
   // width: 1490px;
-  padding:1% 2%;
- 
+  /* padding:1% 2%; */
+ @include desktopHd{
+   /* border:2px solid red; */
+ }
+ @include desktop{
+   /* border:2px solid green; */
+   
+ }
   @include tablets {
     width: 100%;
     padding:2%;
+    /* border:2px solid blue; */
   }
   @include phones {
     width: 100%;
-    
+    /* border:2px solid pink; */
   }
 }
 

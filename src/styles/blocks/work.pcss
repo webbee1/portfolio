@@ -13,6 +13,8 @@
 
 .work__slider {
   display: flex;
+ justify-content:space-between; /**/
+ align-items:flex-start; /**/
   @include tablets {
     flex-direction: column;
     margin-bottom:50px;
@@ -20,12 +22,12 @@
 }
 
 .work__content-text {
-  width: 45%;
+  width: 32%;
+  padding-left:4%;
    color: $grey;
   font-weight: 600;
   line-height: 1.88em;
-  padding:0 5%;
-  margin-bottom: 45px;
+  
   @include tablets {
     display: flex;
     flex-direction: column;
@@ -51,6 +53,7 @@
   height: 15px;
   fill: $links-color;
   margin-right: 20px;
+  
 }
 
 .content-text__occ{
@@ -62,7 +65,7 @@
     }
   
       &-pic{
-    text-decoration: none;
+  text-decoration: none;
   color: $dark-grey;
   font-weight: 600;
   font-size: 15px;
@@ -83,8 +86,9 @@
 .content-text__desc{
   color: $grey;
   font-weight: 600;
+  font-size:16px;
   line-height: 1.88em;
-  margin-bottom: 45px;
+ 
   @include tablets{
     width:70%;
   }
@@ -92,10 +96,16 @@
 }
 
 .content-text__look{
-  display: flex;
+    display: flex;
     cursor: pointer;
-    padding: 5px;
+    padding: 21px 0;
     color:$links-color;
+    text-align:center; 
+    font-weight:800;
+    font-size:18px;
+}
+.content-text__look:hover .content-text__look-link {
+    text-decoration: underline;
 }
 .content-text__occ{
   @include phones{

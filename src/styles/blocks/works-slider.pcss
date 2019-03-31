@@ -1,11 +1,12 @@
 section.works-section{
   background-color:$text-color;
-  min-height:650px;
   margin-bottom:5%;
 }
 
 .works__container{
-  margin-bottom:12%;
+    margin-bottom: 11%;
+    padding-top: 10%;
+
   @include tablets{
     padding:0 2%;
   }
@@ -14,18 +15,24 @@ section.works-section{
   color:$footer-color;
   font-size:36px;
   font-weight:700;
-  padding:7% 0%;
+  margin-bottom:6%;
 }
 
-.work__slider__pics {
+.works__slider__pics {
   position: relative;
+  width:100%;
+ 
+}
+.work__slider{
+      width: 100%;
+      height:100%;
 }
 
 .works-slider__pics-content::before {
   position: absolute;
   content: attr(data-slide);
-  right: -52px;
-  top: 180px;
+  right: -12%;
+  top: 40%;
   color: $light-grey;
   font-size: 400px;
   font-weight: 800;
@@ -39,7 +46,7 @@ section.works-section{
 
 .works-slider__fuulpic-container {
   position: relative;
-  margin-right: 15%;
+  margin-right: 8%;
   @include tablets{
     margin-bottom:50px;
   }
@@ -48,18 +55,23 @@ section.works-section{
     margin: 0 -10%;
   }
 }
-
+.works-slider__pics-content{
+  height: 34.375rem;
+  width:90%;
+  position:relative;
+}
 .works-slider__buttons {
     display: flex;
     flex-direction:column;
     position: absolute;
-    top: 68%;
-    right: -5%;
-    z-index: 5;
+    top: 71%;
+    transform: translate(98%);
+    right: 0%;
     justify-content: center;
+  
   @include phones {
    top: 70%;
-    right: 6%;
+  right: 6%;
   }
 }
 
@@ -70,21 +82,13 @@ section.works-section{
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  &_next {
-    transform: rotate(180deg);
-    &:hover {
-      fill: $main-color;
-    }
-  }
   &_prev {
+    transform: rotate(180deg);
+  }
+  &_next {
     transform: rotate(0deg);
-    &:hover {
-      fill: $text-color;
-    }
   }
-  &:hover {
-    background-color:$main-color;
-  }
+  
 }
 
 .works-slider__btn-icon {
@@ -92,19 +96,21 @@ section.works-section{
   height: 10px;
   fill:$text-color;
   &:hover{
-    fill:$footer-color;
+    fill:$icon-color;
   }
 }
 
 .works-slider__thumbs {
   position: absolute;
-  bottom: 60px;
+  bottom:12%;
   right: 0;
-  width: 80%;
+  transform:translate(0%);
+  width: 70%;
   display:inline-flex;
   flex-direction:row;
   justify-content:flex-end;
   align-items:flex-end;
+
   @include tablets{
     width:85%;
     bottom:45px;
@@ -116,11 +122,25 @@ section.works-section{
 .works-slider__thumb_item{
   margin-right:2px;
   outline:2px solid transparent;
+  
 }
-.works-slider__thumb_item {
-  &.active {
-   outline:2px solid $main-color;
-    
-   
+
+
+.preview__thumb_active,
+.works-slider__thumb_item.active{
+
+  &:hover {
+  outline:2px solid $main-color;
   }
+}
+
+  
+.preview__thumb_active, 
+.works-slider__thumb_item:hover{
+  outline:2px solid $main-color;
+  
+}
+  
+.works-slider__btn:hover{
+  background:$main-color;
 }

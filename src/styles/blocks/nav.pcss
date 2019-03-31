@@ -1,11 +1,19 @@
 .nav{
   display: flex;
+  flex:1;
   font-weight:400;
   justify-content:center;
   padding:0 2%;
   justify-content: flex-end;
   white-space: nowrap;
-
+   @include desktop{
+      flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: stretch;
+}
+  
   @include tablets {
     display: none;
   }
@@ -14,8 +22,12 @@
 
 .nav__list{
   display:flex;
+  align-items:center;
+flex-wrap:wrap;
 }
-
+.nav__item{
+  margin-right:50px;
+}
 .nav__link, .nav__footer-link{
   white-space: nowrap;
   justify-content:space-between;
@@ -44,11 +56,12 @@
 .nav__item:first-child,
 .nav__footer-item:first-child{
   margin-left:0;
+
   }
 
 .nav__footer{
   margin-bottom:50px;
-  width:80%;
+  width:73%;
    @include tablets{
     width:93%;
   }
@@ -67,3 +80,4 @@
 font-weight:400;
 justify-content:center;
 }
+

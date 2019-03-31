@@ -20,18 +20,18 @@ html(lang="en")
               include ./sections/hero.pug
         include ./sections/about-section.pug 
         section(id="section_3").skills-section
+          .skills__prev
           .container.skills-container
             .skills__box
               .skills__box-title Чем я могу быть полезен вам
               p.skills__info Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
             .skills__right  
               #skills-component
-        section.work__section
+        section(id="section_4").works__section
           .container.works__container
-            h3.section-title.works__section-title Мои работы
+            h3.works__section-title Мои работы
             .works__content 
               #slider-component
-        section(id="section_4").works__section                       
         section(id="section_5").feedback-section
           .container.feedback-container
             .feedback__decor-right
