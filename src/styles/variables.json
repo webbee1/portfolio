@@ -1,5 +1,6 @@
 {
   "text-color": "#ffffff",
+  "error-color": "#cd1515",
   "links-color": "#4b6fd7",
   "font-color": "#2d3c4e",
   "dark-grey":"#29394d",

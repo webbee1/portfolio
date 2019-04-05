@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items:center;
-  
+  padding: 0 0 3% 0;
   @include tablets {
     display: none;
   }
@@ -21,13 +21,5 @@
   height:30px;
   fill:#fff;
    z-index:100;   
-
- &:hover{
-  fill:$main-color;
-  transition: .6s;
-    }
-    &:active{
-  fill:$text-color;
-  transition: .6s;
-    }
+  
 }

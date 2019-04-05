@@ -1,45 +1,25 @@
-.header{
-  width:100%;
+.header {
+  display: flex;
   justify-content: space-between;
+  align-items: center;
+  width:100%;
   z-index:100;
-  display:flex;
-  @include desktop{
-    padding:24px 0;
-  }
-
-  @include phones{
-    justify-content:space-between;
-    align-items:center;
-    min-width:100%;
-  }
 }
 
 .header__logo{
-  line-height:35px;
-
-   @include desktop{
-    padding-left:3%;
-  }
-  @include tablets{
-      font-size:36px;
-   @include phones{
-      font-size:36px;
-  }
-  }
+line-height:35px;
 }
 
-.header__right{
-  display: flex;
-  justify-content:flex-end;
-   @include desktop{
-   width:20%;
-   padding-right:1%;
+.header__nav {
+width:60%;
+flex-wrap:nowrap;
+
+  @include tablets {
+    display: none;
   }
+}
+.header_button{
   @include tablets{
-  align-items:center;
-      
-   @include phones{
-      font-size:36px;
-  }
+    flex:1;
   }
 }

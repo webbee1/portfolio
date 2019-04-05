@@ -6,5 +6,3 @@ var btn = document.querySelector('.hamburger__btn');
       menu.classList.toggle('active');
       btn.classList.toggle('active'); 
     });
-
-  

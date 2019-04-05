@@ -1,24 +1,21 @@
-
 .hamburger__btn {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-
-    right: 0;
-   
-   display:block;
+ position:relative;
+ box-sizing: border-box;
+ 
+  display:block;
+  visibility:hidden;
+	right: 0;
+  align-items: center;
+	justify-content: center;
   width: 24px;
   height:24px;
   cursor: pointer;
-  margin-left:50px;
-  visibility: hidden;
+
   @include tablets{
-    visibility:visible;
-  }
- @include phones{
-  
-   /* position:fixed; */
+       visibility:visible;
   }
 }
+
 
 .hamburger__btn .line {
   border-radius: 10px;
@@ -46,4 +43,4 @@
 
 .line:last-child {
   margin-bottom: 0;
-}
+} 

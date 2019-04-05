@@ -9,4 +9,5 @@ import "./scripts/feedback";
 import "./scripts/scroll";
 import "./scripts/hamburger";
 import "./scripts/works";
+import "./scripts/form";
 import "./scripts/parallax__bottom";

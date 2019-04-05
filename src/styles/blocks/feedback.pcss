@@ -4,9 +4,9 @@ section.feedback-section{
   background-size:cover;
   font-weight:500;
   flex-direction: column;
-  min-height:150vh;
+  min-height:100vh;
   position:relative;
-  padding:8% 0;
+padding-top:14%;
 }
 
 .container.feedback-container{
@@ -14,7 +14,8 @@ section.feedback-section{
     flex-direction: column;
     justify-content: flex-start;
     @include tablets{
-      padding:0 2%;
+      width:100%;
+      margin-bottom:8%;
     }
     @include phones{
     width:90%;
@@ -23,9 +24,8 @@ section.feedback-section{
 
 .feedback__about{
     @include tablets{
-      width: 80%;
+      width: 90%;
       margin:auto;
-      padding:3% 0%;
      @include phones{
        width:90%;
        
@@ -45,14 +45,17 @@ section.feedback-section{
 .feedback__section-title{
   font-weight:700;
   font-size:36px;
+  white-space:nowrap;
   margin-right:70px;
+  padding:2% 0;
 }
 
 .feedback__top{
 display:inline-flex;
-vertical-align:middle;align-items:Center;
+vertical-align:middle;
+align-items:center;
 flex-wrap:nowrap;
-width:41%;
+width:45%;
 justify-content:space-between;
 margin-bottom:6%;
 
@@ -62,8 +65,9 @@ margin-bottom:6%;
     font-size:30px;
     white-space:nowrap; 
   }
-  @include phones{
+  @include tablets{
     flex-wrap:wrap;
+    width:98%;
   }
 }
 
@@ -113,10 +117,9 @@ button.feedback__btn{
 .feedback__comment{
   overflow:hidden;
 width:74%;
-padding-bottom:14%;
-  
-     @include phones {
-margin-bottom:50;
+padding-bottom:5%;
+  @include tablets{
+    width:100%;
   }
 }
 .feedback__comment-list{
@@ -126,6 +129,7 @@ margin-bottom:50;
   transition: transform .8s;
   @include tablets {
     margin-left: 0;
+    padding-bottom: 14%;
   }
   @include phones {
     width: 100%;
@@ -137,6 +141,10 @@ margin-bottom:50;
   flex-shrink: 0;
   padding-right: 30px;
   width: 50%;
+
+  @include tablets{
+    padding-right:30px;
+  }
 
   @include phones {
     margin-right: 0;
@@ -156,6 +164,7 @@ margin-bottom:50;
   font-size:18px;
   line-height:48px;
   font-weight:600;
+  white-space:nowrap;
 }
 
 .person__post{

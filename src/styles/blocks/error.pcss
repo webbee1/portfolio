@@ -1,0 +1,27 @@
+.error{
+  position:absolute;
+  font-size:14px;
+  font-weight:400;
+  visibility:hidden;
+  transform: translateY(5px);
+  transition: all 0.3s ease-in-out;
+  background:$error-color;
+  color:$text-color;
+  padding:10px;
+  margin-left:100px;
+  &:before {
+    content: '';
+    position:absolute;
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 8px solid $error-color;
+    opacity: 0;
+    transform: translateX(-50%) translateY(-0.25rem);
+    top: -0.25rem;
+    left: 50%;
+    z-index: 3;
+  }
+
+}

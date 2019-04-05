@@ -3,20 +3,19 @@ header.header
     a.logo(href="") BA
   nav.nav
     ul.nav__list
-      - var nav = ["Главная", "Обо мне", "Навыки", "Работы", "Отзывы", "Связаться"]
+      - var nav = [{name: "Главная", id:'#hero'}, {name: "Обо мне", id:'#about'},{name: "Навыки", id:'#skills'}, {name: "Работы", id:'#works'}, {name:"Отзывы", id:'#review'},{name: "Связаться", id:'#form'}]
       each item in nav
         li.nav__item
-          a(href="#").nav__link #{item}
-
-  .header__right                     
-    .header__social
-      ul.socials
-        - var socials = ['insta', 'vk', 'github'];
-        each item in socials
-          li.socials__item
-            a(href="#").socials__link
-              +icon(item, 'socials__icon')
-    .hamburger__btn(#hamburger__menu)
-      span.line
-      span.line
-      span.line         
+          a(href=item.id).nav__link #{item.name}
+                  
+  .header__buttons
+    ul.socials
+      - var socials = ['insta', 'vk', 'github'];
+      each item in socials
+        li.socials__item
+          a(href="#").socials__link
+            +icon(item, 'socials__icon')
+      .hamburger__btn(#hamburger__menu)
+        span.line
+        span.line
+        span.line  

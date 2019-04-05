@@ -1,12 +1,9 @@
-
-.work {
-  padding: 5% 0 13% 0;
-
-  @include phones {
-    padding-bottom: 30%;
+.works__section{
+  padding: 5% 0 7%;
+  @include tablets{
+   padding-top:12%;
   }
 }
-
 .work__title {
   margin-bottom: 61px;
 }
@@ -25,14 +22,16 @@
   width: 32%;
   padding-left:4%;
    color: $grey;
+   font-size:14px;
   font-weight: 600;
-  line-height: 1.88em;
+  line-height: 1.88;
   
   @include tablets {
     display: flex;
     flex-direction: column;
     width: 90%;
     margin: auto;
+    padding-left:0;
     text-align: center;
     align-items: center;
     @include phones{
@@ -59,6 +58,7 @@
 .content-text__occ{
     display: flex;
     justify-content: space-between;
+    flex-wrap: nowrap;
     margin-bottom: 45px;
     @include tablets{
       width:50%;
@@ -69,7 +69,7 @@
   color: $dark-grey;
   font-weight: 600;
   font-size: 15px;
-  padding:5px  17px;
+  padding:12px  20px;
   border-radius: 22px;
   background-color:  $light-grey;
     }

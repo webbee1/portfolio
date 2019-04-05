@@ -5,8 +5,12 @@ section.skills-section{
   position:relative;
   display:flex;
   flex-direction:row;
-  height:100%;
+  // min-height: 980PX;
+  min-height: 1000PX;
   @include tablets{
+    overflow:hidden;
+  }
+  @include phones{
     overflow:hidden;
   }
  
@@ -17,37 +21,35 @@ section.skills-section{
     background-size:contain;
     background-attachment: local;
     height: 100%;
-    width: 75%;
+    width: 480PX;
     left: 0%;
     bottom: -10%;
+
+    
     @include desktop{
-    height: 68%;
-    width: 73%;
-    left: 0;
-    -webkit-transform: translate(-10%);
-    transform: translate(-9%);
-    bottom: -10%;
-}
-
-
-}
+    width: 450PX;
+left: -25%;
+    }
     
     @include tablets{
-    transform: rotate(-90deg) translate(0%);
-    left: 3%;
-    top: 60%;
+    width:320PX;
+    transform: rotate(-90deg) translate(-75%);
+  
+
     }
 
+    @include phones{
+      width:350PX;
+    transform: rotate(-90deg) translate(-67%);
+    left: -57%;
+}
+}
 
 .skills-container{
   position:relative;
-  display:flex;
+  padding-top:10%;
   flex-direction:column;
-  margin-bottom:67px;
-  @include desktop{
-    padding-top:7%;
-    border:1px solid red;
-  }
+  width:90%;
 }
 
 .skill {
@@ -78,21 +80,20 @@ section.skills-section{
 }
 
 
-.skills__item{
- padding:2% 0;
-}
 
 .skills-row__title {
   font-size:24px;
   font-weight:600;
   padding: 0% 2%;
   text-align:left;
-  display:inline-flex;
+  display:flex;
   color:$text-color;
+
     @include tablets {
     font-size:18px;
     line-height:2.67;
-    text-align:center;
+    justify-content: center;
+	  align-items: center;
     padding:2% 0;
 }
 }
@@ -103,11 +104,7 @@ section.skills-section{
   justify-content:flex-start;
   align-items:center;
   justify-content:space-around;
-  flex-wrap:wrap;
   margin-bottom:40px;
-  @include desktop{
-    margin-bottom:68px;
-  }
   @include tablets {
     margin:auto;
     flex-wrap:nowrap;
@@ -137,7 +134,7 @@ section.skills-section{
 }
 
  .skills__right-desc{
-   padding: 0 5% 0 5%;
+   padding:  0 6%;
   width:65%;
   
   @include tablets {
@@ -154,10 +151,11 @@ section.skills-section{
   flex-direction:column;
   align-items:center;
   align-content:stretch;
-  padding:4% 0 4%;
+  /* padding:7% 0 0; */
+  margin:auto;
 
   @include tablets {
-    width:80%;
+   margin-bottom:3%;
 }
 @include phones{
   width:90%;
@@ -169,8 +167,9 @@ section.skills-section{
   margin-left:10%;
   line-height: 1.8;
   color:$half-white;
+  padding-bottom: 4%;
   @include tablets {
-    width:95%;
+    width:80%;
     text-align:center;
 }
 @include phones{

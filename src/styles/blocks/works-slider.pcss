@@ -1,21 +1,22 @@
 section.works-section{
   background-color:$text-color;
-  margin-bottom:5%;
 }
 
 .works__container{
-    margin-bottom: 11%;
-    padding-top: 10%;
+
+    padding-top:3%;
+    width: 95%;
+    margin: 0 auto;
 
   @include tablets{
-    padding:0 2%;
+    padding:5% 0 3%;
   }
 }
 .works__section-title{
   color:$footer-color;
   font-size:36px;
   font-weight:700;
-  margin-bottom:6%;
+  margin-bottom:7%;
 }
 
 .works__slider__pics {
@@ -40,23 +41,25 @@ section.works-section{
   z-index: -1;
 
   @include tablets {
-    top: 27%;
+   width: 80%;
+    right: -60%;
+    top: 28%;
+
   }
 }
 
 .works-slider__fuulpic-container {
   position: relative;
   margin-right: 8%;
-  @include tablets{
-    margin-bottom:50px;
-  }
+  margin-bottom:8%;
+
   
   @include phones {
     margin: 0 -10%;
   }
 }
 .works-slider__pics-content{
-  height: 34.375rem;
+  // height: 34.375rem;
   width:90%;
   position:relative;
 }
@@ -64,20 +67,18 @@ section.works-section{
     display: flex;
     flex-direction:column;
     position: absolute;
-    top: 71%;
-    transform: translate(98%);
-    right: 0%;
-    justify-content: center;
-  
-  @include phones {
-   top: 70%;
-  right: 6%;
-  }
+    margin-right:-49px;
+    right: 0;
+    bottom: 14%;
+    @include tablets{
+      bottom:10%;
+    }
 }
 
 .works-slider__btn {
   width: 49px;
   height: 49px;
+  position:relative;
   background-color: $dark-grey;
   display: inline-flex;
   align-items: center;
@@ -105,8 +106,9 @@ section.works-section{
   bottom:12%;
   right: 0;
   transform:translate(0%);
-  width: 70%;
+  width: 85%;
   display:inline-flex;
+  // display:inline-flex;
   flex-direction:row;
   justify-content:flex-end;
   align-items:flex-end;

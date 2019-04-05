@@ -7,7 +7,7 @@ section{
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-    margin-top:-1%;
+    margin-top:-10PX;
   background-repeat: no-repeat;
 }
 
@@ -24,14 +24,17 @@ section{
   font-size:30px;
   font-weight:700;
   text-align:left;
-  margin-bottom:55px;
+  margin-bottom:8px;
   color:$text-color;
+
   @include tablets {
-    padding: 0 15%;
+    padding: 0 16%;
+    width:75%;
     text-align: center;
     margin-bottom:30px;
 }
-@include phones{
+
+  @include phones{
   text-align:left;
   padding:0;
 }

@@ -14,12 +14,12 @@ html(lang="en")
       .maincontent
         .wellcome-section
           include ./sections/parallax.pug           
-          section(id="section_1").hero-section
+          section.fullscreen-section.hero-section#hero
             .container.hero-container
               include ./sections/header.pug
               include ./sections/hero.pug
         include ./sections/about-section.pug 
-        section(id="section_3").skills-section
+        section.skills-section#skills
           .skills__prev
           .container.skills-container
             .skills__box
@@ -27,12 +27,12 @@ html(lang="en")
               p.skills__info Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
             .skills__right  
               #skills-component
-        section(id="section_4").works__section
+        section.works__section#works
           .container.works__container
             h3.works__section-title Мои работы
             .works__content 
               #slider-component
-        section(id="section_5").feedback-section
+        section.feedback-section#review
           .container.feedback-container
             .feedback__decor-right
             include ./sections/parallax__bottom.pug          

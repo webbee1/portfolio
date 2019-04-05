@@ -6,18 +6,14 @@
   bottom:0;
   left:0;
   right:0;
-  @include  super-wide{
+  @include super-wide{
     display:none;
   }
   @include tablets {
     display: none;
   }
 } 
-
-@include desktop{
-  height:1660px;
-
-     &:after{
+ &:after{
   content:"";
   position:absolute;
   z-index:30;
@@ -27,7 +23,8 @@
   height:100%;
   background:linear-gradient(-180deg, transparent 0, rgba(#1a1f23, 1) 90%);
   } 
-  } 
+ 
+
 .parallax__image{
   max-width: none;
   min-width: 120rem;
@@ -38,7 +35,6 @@
 
 .parallax__layer{
   position:absolute;
-
   display:none;
   top:0;
   left:0;
@@ -79,37 +75,36 @@
   &:nth-child(4){
     display:block;
     .parallax__image{
-      left:-3%;
-      top:19%;
+      left:-4%;
+      top:20%;
        
     }
   }
 &:nth-child(5){
     display:block;
-     z-index:20;
+     z-index:22;
     .parallax__image{
-      top:37%;
-      left:-16%;
-      
-    
+      top:39%;
+      left:-19%;
+  
     }
   }
 &:nth-child(6){
     display:block;
     z-index:20;
     .parallax__image{
-      top:24%;
-    left:-6%;
-    transform: translateX(-230px); 
+      left:-21%;
+      top: 25%;
+      
     
     }
   }
 
 &:nth-child(7){
     display:block;
-     z-index:20;
+     z-index:22;
     .parallax__image{
-      top:45%;
+      top:53%;
     left:-18%;
     object-fit:cover;
     width:180%;
@@ -142,46 +137,68 @@
         
         &:nth-child(6){
             .parallax__image{
-               top:24%;
+               top:27%;
             }
             
-        
         }
-    
     }
 }
 
 
-@media (max-width: 1300px){
-    .parallax__image{
-        &:nth-child(6){
-            top:24%;
-            border:3px solid red;
-        }
-         
 
+@media (max-width: 1500px){
+    .parallax__layer{
         
+        &:nth-child(6){
+            .parallax__image{
+               top:26%;
+            }
+            
+        }
+    }
+}
+
+
+
+@media (max-width: 1600px){
+    .parallax__layer{
+        
+        &:nth-child(6){
+            .parallax__image{
+               top:26%;
+            }
+            
+        }
+    }
+}
+
+
+
+@media (max-width: 1700px){
+    .parallax__layer{
+        
+        &:nth-child(6){
+            .parallax__image{
+               top:26%;
+            }
+            
+        }
     }
 } 
-.parallax__layer:nth-child(6) .parallax__image{
-@include desktop{
-      top:24%;
-    }
-   
-}
 
+
+/* 
 @media (max-width: 1800px){
     .parallax__layer{
         
         &:nth-child(6){
             .parallax__image{
-                top:25%
+               top:25%;
             }
+            
         }
-    
     }
-}
-
+} */
 /* 
 .parallax__shadow{
   position:absolute;
@@ -191,8 +208,5 @@
   width:100%;
   height:100%;
    background:linear-gradient(-180deg, transparent 0, rgba(#1a1f23, .9) 90%); 
-
-  
-
    
   }  */

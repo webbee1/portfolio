@@ -7,7 +7,6 @@
     margin:0 auto;
    justify-content:center;
    @include phones{
-    
     margin: 0 auto;
     justify-content: center;
     align-items: center;
@@ -30,14 +29,19 @@
   font-size:36px;
   margin-bottom:50px;
     display:inline-flex;
+    
   @include tablets{
   justify-content:center;
+  margin-bottom:30px;
   }
 }
 
 .form__row{
   display:flex;
   margin-bottom:30px;
+  @include tablets{
+    margin-bottom:5px;
+  }
   
      @include phones {
 flex-direction:column;
@@ -76,16 +80,20 @@ margin:auto;
 .form__input, .form__row--big{
   color: $text-color;
   border:0;
-  width:100%;
+  line-height: 1.71;
   padding:25px 0;
+  width:100%;
   background:transparent;
   outline:none;
-
 }
+ .form__row--big{
+   @include tablets{
+     margin-bottom:50px;
+   }
+ }
 .form__input::-webkit-input-placeholder{
   color: $text-color;
   font-weight:600;
-
 }
 
 .form-btn{
@@ -111,8 +119,11 @@ textarea {
 }
 input[placeholder] {
   text-overflow:ellipsis;
+  width:50%;
 }
-
+textarea[placeholder]{
+  width:60%;
+}
 .form__title.section-title{
   margin-bottom:86px;
 }
