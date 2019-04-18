@@ -1,17 +1,9 @@
-.works__section{
-  padding: 5% 0 7%;
-  @include tablets{
-   padding-top:12%;
-  }
-}
-.work__title {
-  margin-bottom: 61px;
-}
+
 
 .work__slider {
   display: flex;
- justify-content:space-between; /**/
- align-items:flex-start; /**/
+ justify-content:space-between; 
+ align-items:flex-start; 
   @include tablets {
     flex-direction: column;
     margin-bottom:50px;
@@ -19,17 +11,17 @@
 }
 
 .work__content-text {
-  width: 32%;
+  max-width: 32%;
   padding-left:4%;
-   color: $grey;
-   font-size:14px;
+  color: $grey;
+  font-size:14px;
   font-weight: 600;
   line-height: 1.88;
   
   @include tablets {
     display: flex;
     flex-direction: column;
-    width: 90%;
+    max-width: 90%;
     margin: auto;
     padding-left:0;
     text-align: center;
@@ -41,35 +33,34 @@
   }
 
   @include phones {
-    width: 100%;
+    /* width: 100%; */
     text-align: left;
-    padding:50px 0 0;
+    /* padding:50px 0 0; */
   }
 }
 
 .content-text__icon{
-   width: 15px;
+  width: 15px;
   height: 15px;
   fill: $links-color;
   margin-right: 20px;
-  
 }
 
 .content-text__occ{
     display: flex;
     justify-content: space-between;
-    flex-wrap: nowrap;
     margin-bottom: 45px;
+    flex-wrap: wrap;
     @include tablets{
       width:50%;
     }
-  
       &-pic{
   text-decoration: none;
   color: $dark-grey;
   font-weight: 600;
   font-size: 15px;
-  padding:12px  20px;
+  padding:12px  24px;
+  margin-bottom:15px;
   border-radius: 22px;
   background-color:  $light-grey;
     }
@@ -81,14 +72,13 @@
   line-height:1.6;
   font-weight: 700;
   margin-bottom: 40px;
-   
 }
 .content-text__desc{
   color: $grey;
   font-weight: 600;
   font-size:16px;
   line-height: 1.88em;
- 
+
   @include tablets{
     width:70%;
   }

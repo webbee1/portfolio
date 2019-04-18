@@ -15,7 +15,10 @@ header.header
         li.socials__item
           a(href="#").socials__link
             +icon(item, 'socials__icon')
-      .hamburger__btn(#hamburger__menu)
+      .hamburger
+        ul.nav__list
+      - var nav = [{name: "Главная", id:'#hero'}, {name: "Обо мне", id:'#about'},{name: "Навыки", id:'#skills'}, {name: "Работы", id:'#works'}, {name:"Отзывы", id:'#review'},{name: "Связаться", id:'#form'}]   
+      .hamburger__btn
         span.line
         span.line
         span.line  

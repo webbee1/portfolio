@@ -1,17 +1,20 @@
 .footer{
-width:100%;
+
 background:$footer-color;
 bottom:0;
 left:0;
 right:0;
-padding:3% 0;
+padding:3%;
 }
 
 .footer-container{
+  
+  margin:auto;
 display:flex;
 justify-content:space-evenly;
 @include phones{
   flex-direction:column;
+ 
 }
 }
 
@@ -27,7 +30,9 @@ justify-content:space-evenly;
     }
     @include phones{
       display:flex;
-      width:100%;
+      width:85%;
+
+      text-align:left;
     
     }
   }

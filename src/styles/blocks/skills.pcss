@@ -6,7 +6,7 @@ section.skills-section{
   display:flex;
   flex-direction:row;
   // min-height: 980PX;
-  min-height: 1000PX;
+  min-height: 1100PX;
   @include tablets{
     overflow:hidden;
   }
@@ -28,20 +28,19 @@ section.skills-section{
     
     @include desktop{
     width: 450PX;
-left: -25%;
+    left: -25%;
     }
     
     @include tablets{
     width:320PX;
     transform: rotate(-90deg) translate(-75%);
-  
-
+    bottom:-15%;
     }
 
     @include phones{
-      width:350PX;
     transform: rotate(-90deg) translate(-67%);
-    left: -57%;
+    left: -50%;
+    bottom:-18%;
 }
 }
 
@@ -49,7 +48,6 @@ left: -25%;
   position:relative;
   padding-top:10%;
   flex-direction:column;
-  width:90%;
 }
 
 .skill {

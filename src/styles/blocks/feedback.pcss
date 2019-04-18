@@ -14,12 +14,10 @@ padding-top:14%;
     flex-direction: column;
     justify-content: flex-start;
     @include tablets{
-      width:100%;
+    
       margin-bottom:8%;
     }
-    @include phones{
-    width:90%;
-  }
+
 }
 
 .feedback__about{
@@ -44,10 +42,26 @@ padding-top:14%;
 
 .feedback__section-title{
   font-weight:700;
+  line-height:2;
   font-size:36px;
   white-space:nowrap;
+ 
   margin-right:70px;
   padding:2% 0;
+   @include tablets{
+    
+     justify-content:center;
+  align-items:center;
+  margin-right:0;
+   
+  }
+   @include phones{
+    font-size:24px;
+     justify-content:center;
+  align-items:center;
+  margin-right:0;
+   
+  }
 }
 
 .feedback__top{
@@ -61,7 +75,7 @@ margin-bottom:6%;
 
 @include phones{
     display:flex;
-    dlex-direction:column;
+    flex-direction:column;
     font-size:30px;
     white-space:nowrap; 
   }
