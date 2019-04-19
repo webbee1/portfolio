@@ -7,3 +7,4 @@ btn.addEventListener('click', function (e) {
   btn.classList.toggle('active'); // при клике на иконку активировать функцию 
   // body.classList.toggle('noscroll');
 });
+

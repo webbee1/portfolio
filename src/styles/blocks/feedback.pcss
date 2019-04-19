@@ -32,12 +32,22 @@ padding-top:14%;
 }
 .feedback__decor-right{
   background-image:url("../images/content/leafage.png");
+  background-repeat: no-repeat;
   background-size:contain;
   position:absolute;
   right:-74%;
   top:-15%;
   width:100%;
   height:100%;
+  display:none;
+  @include tablets{
+    display:block;
+    right:-50%;
+  }
+  @include phones{
+    display:block;
+    right:-40%;
+  }
 }
 
 .feedback__section-title{
