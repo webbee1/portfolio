@@ -14,12 +14,18 @@ section.works-section{
   @include tablets{
     padding:5% 0 3%;
   }
+   @include phones{
+   width:100%;
+  }
 }
 .works__section-title{
   color:$footer-color;
   font-size:36px;
   font-weight:700;
   margin-bottom:7%;
+   @include phones{
+    text-align:center;
+  }
 }
 
 
