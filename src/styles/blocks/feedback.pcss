@@ -4,25 +4,31 @@ section.feedback-section{
   background-size:cover;
   font-weight:500;
   flex-direction: column;
-  min-height:150vh;
+  min-height:100vh;
   position:relative;
-}
-.feedback__section-title{
-  font-size:36px;
-  color:$text-color;
+padding-top:14%;
 }
 
 .container.feedback-container{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    margin-bottom:5%;
-     
+    @include tablets{
+    
+      margin-bottom:8%;
+    }
+
 }
 
 .feedback__about{
-  width:80%;
-  padding:6% 0;
+    @include tablets{
+      width: 90%;
+      margin:auto;
+     @include phones{
+       width:90%;
+       
+     } 
+    }
 }
 .feedback__decor-right{
   background-image:url("../images/content/leafage.png");
@@ -36,23 +42,60 @@ section.feedback-section{
 
 .feedback__section-title{
   font-weight:700;
+  line-height:2;
   font-size:36px;
-  margin-right:10%;
+  white-space:nowrap;
+ 
+  margin-right:70px;
+  padding:2% 0;
+   @include tablets{
+    
+     justify-content:center;
+  align-items:center;
+  margin-right:0;
+   
+  }
+   @include phones{
+    font-size:24px;
+     justify-content:center;
+  align-items:center;
+  margin-right:0;
+   
+  }
 }
 
-
 .feedback__top{
-  display:flex;
-margin-bottom:7%;
+display:inline-flex;
+vertical-align:middle;
+align-items:center;
+flex-wrap:nowrap;
+width:45%;
+justify-content:space-between;
+margin-bottom:6%;
+
+@include phones{
+    display:flex;
+    flex-direction:column;
+    font-size:30px;
+    white-space:nowrap; 
+  }
+  @include tablets{
+    flex-wrap:wrap;
+    width:98%;
+  }
 }
 
 .feedback__button{
-  display:flex;
+  display:inline-flex;
   flex-direction: row;
   align-self: center;
+  height:50px;
+  @include phones{
+    margin:auto;
+  }
 }
 
-.feedback__btn{
+button.feedback__btn{
   width:50px;
   height:50px;
   background-color:transparent;
@@ -60,8 +103,15 @@ margin-bottom:7%;
   position:relative;
   border-radius:100%;
   margin-right:30px;
+  outline:none;
+  &:hover{
+    background:$main-color;
+    border:none;
+    transition:.5s;
+  }
     &:last-child{
       margin-right:0;
+     
     }
 }
 
@@ -76,28 +126,62 @@ margin-bottom:7%;
   cursor:pointer;
   transform:translate(-50%, -50%);
   fill:#fff;
-}
 
+}
+.feedback__comment{
+  overflow:hidden;
+width:74%;
+padding-bottom:5%;
+  @include tablets{
+    width:100%;
+  }
+}
 .feedback__comment-list{
   display:flex;
   align-items:flex-start;
-  width:80%;
-  padding:10px;
-  overflow:hidden;
-}
-
-.feedback__comment-item{
-  width:45%;
-  margin-right:50px;
-  flex-shrink:0;
-
-  &:last-child{
-    margin-right:0;
+  will-change: transform;
+  transition: transform .8s;
+  @include tablets {
+    margin-left: 0;
+    padding-bottom: 14%;
+  }
+  @include phones {
+    width: 100%;
+    margin-left: 0;
   }
 }
 
+.feedback__comment-item{
+  flex-shrink: 0;
+  padding-right: 30px;
+  width: 50%;
 
+  @include tablets{
+    padding-right:30px;
+  }
+
+  @include phones {
+    margin-right: 0;
+    width: 100%;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+
+}
 
 .feedback__btn.feedback__btn_prew{
   transform: rotate(180deg); 
+}
+
+.person__name{
+  font-size:18px;
+  line-height:48px;
+  font-weight:600;
+  white-space:nowrap;
+}
+
+.person__post{
+  font-size:16px;
+  color:$icon-color;
 }

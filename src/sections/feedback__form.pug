@@ -1,0 +1,23 @@
+.feedback__form#form
+  form(action='' novalidate).form
+    .form__row
+      label.form-box.form-box__error(for="") Введите ваше имя
+          .form-box__content
+            +icon("user", "form-box__icon")
+            .form-box__field
+            input.form__input(type="text" name="name", placeholder="Ковальчук Дмитрий")
+            .error
+      label.form-box.form-box__error(for="") Введите ваш email
+          .form-box__content
+            +icon("envelope", "form-box__icon")
+            .form-box__field
+            input.form__input(type="text", placeholder="loftschool@study.com")
+            .error
+    .form__row.form__row--big
+      label.form-box(for="") Сообщение к письму
+          .form-box__content
+            +icon("message", "form-box__icon")
+            .form-box__field
+            textarea.form__input.form__input--big(type="text" name="comment", placeholder="Требуется ваша помощь в создании сайта. Интересуют сроки и цена вопроса")
+    .form__row
+      input.form-btn(type="submit" value="Отправить")

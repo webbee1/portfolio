@@ -1,0 +1,23 @@
+script(type="text/x-template")#feedback
+    .feedback__about
+      .feedback__top
+        h4.feedback__section-title Что обо мне говорят
+        .feedback__button
+          button(type="button" @click="slide('prew')").feedback__btn.feedback__btn_prew
+            +icon('arrow-down','feedback__btn-icon')
+          button(type="button" @click="slide('next')").feedback__btn.feedback__btn_next
+            +icon('arrow-down','feedback__btn-icon')
+
+      .feedback__comment
+        ul.feedback__comment-list(ref="feedback-slider")
+          li.feedback__comment-item(v-for="feedbacks in feedback")
+            .quote
+              .quote__info {{feedbacks.text}} 
+              .info__desc
+                .info__ava
+                  .info__wrap
+                    .info__ava-img
+                      img(:src="feedbacks['info__ava-img']").info__ava-img
+                .info__desc__person
+                  .person__name {{feedbacks['author-name']}}
+                  .person__post {{feedbacks['author-occ']}}

@@ -2,22 +2,35 @@
   display:flex;
   justify-content:space-evenly;
   align-items:center;
+
+  @include tablets{
+    flex-direction:row;
+    justify-content:space-between;
+  }
+ 
 }
 
 .socials__icon{
   width:28px;
   height:25px;
   fill:$icon-color;
-
-   &:hover{
+    &:hover{
   fill: $main-color;
   transition: .6s;
+  }
+
+  @include phones {
+    display: none;
+  }
+
+   @include tablets {
+    width:30px;
+    height:26px;
   }
 }
 .socials__item{
   margin-right:25px;
-  
-  &:last-child{
+    &:last-child{
     margin-right:0;
   }
 }
@@ -58,4 +71,7 @@
 
 .footer__socials{
   display:inline-flex;
+  @include tablets{
+    margin-bottom:40px;
+  }
 }
